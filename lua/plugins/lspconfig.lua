@@ -55,6 +55,35 @@ return {
         debounce_text_changes = 150,
       }
     })
+		
+		-- quick_lint_js configuration
+		lspconfig.quick_lint_js.setup({
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			}
+		})
+
+		-- marksman markdown lsp configuration
+		lspconfig.marksman.setup({
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			}
+		})
+	
+		-- html completion support
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+		
+		 -- C/C++ LSP server configuration
+    lspconfig.html.setup({
+      capabilities = capabilities,
+			on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      }
+    })
 
     -- C/C++ LSP server configuration
     lspconfig.clangd.setup({
