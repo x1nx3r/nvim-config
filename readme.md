@@ -48,3 +48,13 @@ These key mappings are for Language Server Protocol (LSP) features enabled throu
 | `<space>q`       | Normal | Add diagnostics to the location list                       |
 | `<space>f`       | Normal | Format the current buffer                                  |
 
+
+## Nvim-tree Keybindings
+
+| **Key**   | **Scope**        | **Action**                                                                 |
+|-----------|------------------|---------------------------------------------------------------------------|
+| `<C-h>`   | Global           | Toggles the `nvim-tree` file explorer.                                     |
+| `l`       | Within nvim-tree | Edit the selected file or open the folder under the cursor.                |
+| `L`       | Within nvim-tree | Open the selected file in a vertical split and return focus to the tree.   |
+| `h`       | Within nvim-tree | Close the current folder in the tree.                                      |
+| `H`       | Within nvim-tree | Collapse all folders in the tree.                                          |
